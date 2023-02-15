@@ -1,4 +1,4 @@
-package ro.andonescu.gwt.example.client;
+package ro.andonescu.gwt.shared.client;
 
 import com.google.gwt.user.client.rpc.RemoteService;
 import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;

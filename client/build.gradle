@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+    id "org.docstr.gwt" version "1.1.24"
+}
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'war'
+
+dependencies {
+    gwt project(":shared")
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+gwt {
+    gwtVersion='2.10.0'
+
+    minHeapSize = "512M"
+    maxHeapSize = "1024M"
+    logLevel = 'INFO'
+
+    modules 'ro.andonescu.gwt.example.MyWebApp'
+}

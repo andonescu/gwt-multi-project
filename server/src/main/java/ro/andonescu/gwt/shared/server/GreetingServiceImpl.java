@@ -1,7 +1,7 @@
-package ro.andonescu.gwt.example.server;
+package ro.andonescu.gwt.shared.server;
 
-import ro.andonescu.gwt.example.client.GreetingService;
-import ro.andonescu.gwt.example.shared.FieldVerifier;
+import ro.andonescu.gwt.shared.client.GreetingService;
+import ro.andonescu.gwt.shared.shared.FieldVerifier;
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 
 /**

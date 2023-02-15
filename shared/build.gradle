@@ -1,0 +1,15 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'com.google.gwt', name: 'gwt-user', version: '2.10.0'
+}
+
+test {
+    useJUnitPlatform()
+}

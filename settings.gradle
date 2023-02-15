@@ -1,2 +1,5 @@
 rootProject.name = 'MyWebApp'
 
+include 'shared'
+include 'client'
+include 'server'
