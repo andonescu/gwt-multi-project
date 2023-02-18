@@ -16,6 +16,9 @@ dependencies {
     implementation project(":shared")
     implementation group: 'org.gwtproject', name: 'gwt-servlet', version: '2.10.0'
 
+    // for cors filter
+    implementation 'org.eclipse.jetty:jetty-servlets:9.4.50.v20221201'
+
     compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'

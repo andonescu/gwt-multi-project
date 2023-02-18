@@ -1,5 +1,6 @@
 package ro.andonescu.gwt.example.client;
 
+import com.google.gwt.user.client.rpc.ServiceDefTarget;
 import ro.andonescu.gwt.example.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
@@ -33,6 +34,13 @@ public class MyWebApp implements EntryPoint {
    * Create a remote service proxy to talk to the server-side Greeting service.
    */
   private final GreetingServiceAsync greetingService = GWT.create(GreetingService.class);
+
+
+  public MyWebApp() {
+    ServiceDefTarget serviceDefTarget =  ((ServiceDefTarget) greetingService);
+
+    serviceDefTarget.setServiceEntryPoint("http://localhost:10000/mywebapp/greet");
+  }
 
   /**
    * This is the entry point method.
