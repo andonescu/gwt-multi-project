@@ -18,13 +18,13 @@
   <!-- <inherits name='com.google.gwt.user.theme.dark.Dark'/>     -->
 
   <!-- Other module inherits                                      -->
+  <inherits name='ro.andonescu.gwt.example.Shared'/>
 
   <!-- Specify the app entry point class.                         -->
   <entry-point class='ro.andonescu.gwt.example.client.MyWebApp'/>
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
-  <source path='shared'/>
 
   <!-- allow Super Dev Mode -->
   <add-linker name="xsiframe"/>

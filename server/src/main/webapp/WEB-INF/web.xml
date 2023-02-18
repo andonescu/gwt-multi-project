@@ -8,7 +8,7 @@
     <!-- Servlets -->
     <servlet>
         <servlet-name>greetServlet</servlet-name>
-        <servlet-class>ro.andonescu.gwt.shared.server.GreetingServiceImpl</servlet-class>
+        <servlet-class>ro.andonescu.gwt.server.GreetingServiceImpl</servlet-class>
     </servlet>
 
     <servlet-mapping>

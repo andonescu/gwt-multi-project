@@ -1,4 +1,4 @@
-package ro.andonescu.gwt.shared.shared;
+package ro.andonescu.gwt.example.shared;
 
 /**
  * <p>

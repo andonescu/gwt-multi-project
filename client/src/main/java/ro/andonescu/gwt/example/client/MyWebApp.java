@@ -1,7 +1,6 @@
 package ro.andonescu.gwt.example.client;
 
-import ro.andonescu.gwt.shared.client.GreetingService;
-import ro.andonescu.gwt.shared.shared.FieldVerifier;
+import ro.andonescu.gwt.example.shared.FieldVerifier;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.event.dom.client.ClickEvent;

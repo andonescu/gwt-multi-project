@@ -1,5 +1,6 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
 
 repositories {
@@ -12,4 +13,27 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+task gwtSourcesJar(type: Jar) {
+    archiveBaseName = "shared-gwt"
+
+    from(project.sourceSets.main.java)
+    from(project.sourceSets.main.resources)
+}
+
+jar.dependsOn(gwtSourcesJar)
+
+publishing {
+    publications {
+        gwt(MavenPublication) {
+            artifactId = "shared-gwt"
+            groupId = "ro.andonescu.gwt"
+            artifact("build/libs/shared-gwt.jar")
+            pom {
+                name = "GWT shared elems"
+                description = "Shared elements between client and server applications"
+            }
+        }
+    }
 }

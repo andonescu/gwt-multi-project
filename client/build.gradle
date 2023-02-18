@@ -10,7 +10,8 @@ repositories {
 apply plugin: 'war'
 
 dependencies {
-    gwt project(":shared")
+    implementation project(":shared")
+    gwt fileTree(dir: project(':shared').getBuildDir(), includes: ["**/*gwt*.jar"])
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
@@ -29,3 +30,6 @@ gwt {
 
     modules 'ro.andonescu.gwt.example.MyWebApp'
 }
+
+draftCompileGwt.dependsOn(":shared:jar")
+compileGwt.dependsOn(":shared:jar")

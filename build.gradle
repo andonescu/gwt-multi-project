@@ -1,3 +1,9 @@
 repositories {
     mavenCentral()
 }
+
+allprojects {
+    tasks.withType(JavaCompile) {
+        options.release = 11
+    }
+}
