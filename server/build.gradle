@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'org.gretty' version "4.0.3"
+    id 'org.gretty' version "3.0.5"
 }
 
 // https://plugins.gradle.org/plugin/org.gretty
@@ -27,6 +27,10 @@ test {
 }
 
 gretty {
+    httpPort = 10000
     contextPath = '/'
 
+    loggingLevel = "DEBUG"
+
+    servletContainer = 'jetty9.4'
 }
